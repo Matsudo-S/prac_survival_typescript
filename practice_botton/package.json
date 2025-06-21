@@ -1,0 +1,17 @@
+{
+  "name": "practice-botton",
+  "private": true,
+  "version": "1.0.0",
+  "description": "TypeScript practice project with auto git push",
+  "scripts": {
+    "auto-push": "node auto-push.js",
+    "auto-push-simple": "./auto-push-simple.sh",
+    "watch": "npm run auto-push",
+    "dev": "cd like-button && npm run dev",
+    "build": "cd like-button && npm run build",
+    "lint": "cd like-button && npm run lint"
+  },
+  "devDependencies": {
+    "chokidar-cli": "^3.0.0"
+  }
+} 
