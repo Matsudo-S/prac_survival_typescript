@@ -4,7 +4,7 @@ import { useState} from "react";
 function App() {
   return (
     <>
-      <h1>TypeScriptはいいぞ - Auto Git Push Test</h1>
+      <h1>TypeScriptはいいぞ</h1>
       <LikeButton />
     </>
   )

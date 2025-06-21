@@ -7,10 +7,7 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "auto-push": "node auto-push.js",
-    "auto-push-simple": "./auto-push-simple.sh",
-    "watch": "npm run auto-push"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^19.1.0",
