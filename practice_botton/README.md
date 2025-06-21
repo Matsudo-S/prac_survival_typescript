@@ -1,19 +1,23 @@
-# Practice Botton - TypeScript Practice Project
+# Survival TypeScript - Practice Projects
 
-このプロジェクトは、TypeScriptの練習用プロジェクトで、ファイル変更を自動的に検出してgit pushする機能を提供しています。
+このプロジェクトは、TypeScriptの練習用プロジェクト群で、ファイル変更を自動的に検出してgit pushする機能を提供しています。
 
 ## プロジェクト構造
 
 ```
-practice_botton/
-├── like-button/          # React + TypeScript プロジェクト
-│   ├── src/             # ソースコード
-│   ├── public/          # 公開ファイル
-│   └── package.json     # プロジェクト依存関係
-├── auto-push.js         # 自動git pushスクリプト（Node.js版）
-├── auto-push-simple.sh  # 自動git pushスクリプト（シンプル版）
-├── package.json         # ルート依存関係
-└── README.md           # このファイル
+survival_typescript/
+├── practice_botton/        # ボタンプロジェクト
+│   ├── like-button/        # React + TypeScript プロジェクト
+│   │   ├── src/           # ソースコード
+│   │   ├── public/        # 公開ファイル
+│   │   └── package.json   # プロジェクト依存関係
+│   ├── auto-push.js       # プロジェクト固有の自動git pushスクリプト
+│   ├── auto-push-simple.sh # プロジェクト固有のシンプル版スクリプト
+│   └── README.md          # プロジェクト固有の説明
+├── auto-push.js           # ルート自動git pushスクリプト（Node.js版）
+├── auto-push-simple.sh    # ルート自動git pushスクリプト（シンプル版）
+├── package.json           # ルート依存関係
+└── README.md             # このファイル
 ```
 
 ## 自動Git Push機能
@@ -60,14 +64,17 @@ node auto-push.js
 
 ### 監視対象ファイル
 
-- `like-button/src/**/*` - ソースコード
-- `like-button/public/**/*` - 公開ファイル
-- `like-button/*.html` - HTMLファイル
-- `like-button/*.json` - JSONファイル
-- `like-button/*.js` - JavaScriptファイル
-- `like-button/*.ts` - TypeScriptファイル
-- `like-button/*.css` - CSSファイル
-- `like-button/*.md` - Markdownファイル
+- `practice_botton/like-button/src/**/*` - ソースコード
+- `practice_botton/like-button/public/**/*` - 公開ファイル
+- `practice_botton/like-button/*.html` - HTMLファイル
+- `practice_botton/like-button/*.json` - JSONファイル
+- `practice_botton/like-button/*.js` - JavaScriptファイル
+- `practice_botton/like-button/*.ts` - TypeScriptファイル
+- `practice_botton/like-button/*.css` - CSSファイル
+- `practice_botton/like-button/*.md` - Markdownファイル
+- `practice_botton/*.json` - プロジェクト設定ファイル
+- `practice_botton/*.js` - プロジェクトスクリプト
+- `practice_botton/*.md` - プロジェクトドキュメント
 - `*.json` - ルートJSONファイル
 - `*.js` - ルートJavaScriptファイル
 - `*.md` - ルートMarkdownファイル
@@ -83,7 +90,7 @@ node auto-push.js
 
 ## 開発コマンド
 
-### like-buttonプロジェクトの開発
+### practice_bottonプロジェクトの開発
 
 ```bash
 # 開発サーバー起動
@@ -111,7 +118,7 @@ npm run auto-push-simple
 1. 依存関係のインストール
 ```bash
 npm install
-cd like-button && npm install
+cd practice_botton/like-button && npm install
 ```
 
 2. Gitリポジトリの初期化（初回のみ）
@@ -157,8 +164,8 @@ npm run auto-push
 
 ```javascript
 const watchPaths = [
-  'like-button/src/**/*',
-  'like-button/public/**/*',
+  'practice_botton/like-button/src/**/*',
+  'practice_botton/like-button/public/**/*',
   // 追加したいパターンをここに記述
 ];
 ```
